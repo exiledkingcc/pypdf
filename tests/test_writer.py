@@ -268,6 +268,7 @@ def test_encrypt():
     writer = PdfWriter()
 
     page = reader.pages[0]
+    original_text = page.extract_text()
 
     writer.add_page(page)
     writer.encrypt(user_pwd="userpwd", owner_pwd="ownerpwd", use_128bit=False)
@@ -276,6 +277,12 @@ def test_encrypt():
     tmp_filename = "dont_commit_encrypted.pdf"
     with open(tmp_filename, "wb") as output_stream:
         writer.write(output_stream)
+
+    # Test if we can decrypt the file:
+    reader = PdfReader(tmp_filename, password="userpwd")
+    enc_text = reader.pages[0].extract_text()
+
+    assert enc_text == original_text
 
     # Cleanup
     os.remove(tmp_filename)

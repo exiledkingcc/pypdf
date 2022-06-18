@@ -496,13 +496,10 @@ class PdfWriter:
         :param writer_pageref (PDF page reference): Reference to the page
             appended to the writer.
         """
-        # Get page count from writer and reader
-        reader_num_pages = len(reader.pages)
         writer_num_pages = len(self.pages)
 
         # Copy pages from reader to writer
-        for rpagenum in range(reader_num_pages):
-            reader_page = reader.pages[rpagenum]
+        for rpagenum, reader_page in enumerate(reader.pages):
             self.add_page(reader_page)
             writer_page = self.pages[writer_num_pages + rpagenum]
             # Trigger callback, pass writer page as parameter

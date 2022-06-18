@@ -5,3 +5,5 @@ def pre_mutation(context):
     line = context.current_source_line.strip()
     if "# pragma: no cover" in line:
         context.skip = True
+    if "deprecate" in line:
+        context.skip = True
