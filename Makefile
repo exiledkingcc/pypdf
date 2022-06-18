@@ -22,7 +22,7 @@ test:
 testtype:
 	pytest tests --cov --cov-report term-missing -vv --cov-report html --durations=3 --timeout=30 --typeguard-packages=PyPDF2
 
-mutation-test:
+mutmut-test:
 	mutmut run
 
 mutmut-results:

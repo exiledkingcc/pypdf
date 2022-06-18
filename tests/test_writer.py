@@ -263,7 +263,11 @@ def test_fill_form():
         writer.write(output_stream)
 
 
-def test_encrypt():
+@pytest.mark.parametrize(
+    "use_128_bit",
+    [False, True],
+)
+def test_encrypt(use_128_bit):
     reader = PdfReader(os.path.join(RESOURCE_ROOT, "form.pdf"))
     writer = PdfWriter()
 
@@ -271,7 +275,7 @@ def test_encrypt():
     original_text = page.extract_text()
 
     writer.add_page(page)
-    writer.encrypt(user_pwd="userpwd", owner_pwd="ownerpwd", use_128bit=False)
+    writer.encrypt(user_pwd="userpwd", owner_pwd="ownerpwd", use_128bit=use_128_bit)
 
     # write "output" to PyPDF2-output.pdf
     tmp_filename = "dont_commit_encrypted.pdf"
