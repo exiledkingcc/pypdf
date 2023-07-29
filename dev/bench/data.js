@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1690595132982,
+  "lastUpdate": 1690595751185,
   "repoUrl": "https://github.com/exiledkingcc/PyPDF2",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -11403,6 +11403,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.003272413345496363",
             "extra": "mean: 101.20800477777279 msec\nrounds: 9"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "4083478+pubpub-zz@users.noreply.github.com",
+            "name": "pubpub-zz",
+            "username": "pubpub-zz"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "94f23f9b23ba3d3c0abfc3bf380221708bc881b3",
+          "message": "ENH: Accelerate image list keys generation (#2014)\n\nIterating over the images of `009-pdflatex-geotopo/GeoTopo-komprimiert.pdf` was around 2.88s before. With this PR it's reduced to 0.44s.\r\n\r\nEspecially `X14.jpg` of that PDF took `0.34s` to parse and is now at `0.01s`.\r\n\r\nCloses #1987",
+          "timestamp": "2023-07-28T18:01:07+02:00",
+          "tree_id": "df8dc9fd8500f1454949331dc1ca11d3d9828f9a",
+          "url": "https://github.com/exiledkingcc/PyPDF2/commit/94f23f9b23ba3d3c0abfc3bf380221708bc881b3"
+        },
+        "date": 1690595750166,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_page_operations",
+            "value": 0.7064661513020581,
+            "unit": "iter/sec",
+            "range": "stddev: 0.005989519659044706",
+            "extra": "mean: 1.4154959840000003 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_merge",
+            "value": 11.032677092353888,
+            "unit": "iter/sec",
+            "range": "stddev: 0.012617214027415445",
+            "extra": "mean: 90.63983216666809 msec\nrounds: 12"
+          },
+          {
+            "name": "tests/bench.py::test_text_extraction",
+            "value": 0.217782403745503,
+            "unit": "iter/sec",
+            "range": "stddev: 0.07208991877894026",
+            "extra": "mean: 4.591739198399995 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_read_string_from_stream_performance",
+            "value": 10.434991892892745,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0005025110732227175",
+            "extra": "mean: 95.83141130000286 msec\nrounds: 10"
           }
         ]
       }
