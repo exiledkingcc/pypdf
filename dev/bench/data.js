@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1690595751185,
+  "lastUpdate": 1690853846478,
   "repoUrl": "https://github.com/exiledkingcc/PyPDF2",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -11455,6 +11455,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0005025110732227175",
             "extra": "mean: 95.83141130000286 msec\nrounds: 10"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "4083478+pubpub-zz@users.noreply.github.com",
+            "name": "pubpub-zz",
+            "username": "pubpub-zz"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "534c7b4bf7052c103d94e5761631979e23411e39",
+          "message": "ENH: Process /uniHHHH for text_extract (#2043)\n\n`/uniHHHH` (H is a hexadecimal) glyphs seems to be generated in LaTeX but is ok for other characters\r\n\r\nThis was mentioned in #2016 / #2038",
+          "timestamp": "2023-07-30T17:28:55+02:00",
+          "tree_id": "e5a510f20bf954785a027e00b9f7a12abeec2844",
+          "url": "https://github.com/exiledkingcc/PyPDF2/commit/534c7b4bf7052c103d94e5761631979e23411e39"
+        },
+        "date": 1690853845834,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_page_operations",
+            "value": 0.7430871202275711,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0027485587266404153",
+            "extra": "mean: 1.3457372262000036 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_merge",
+            "value": 11.127179696160498,
+            "unit": "iter/sec",
+            "range": "stddev: 0.011814660753300062",
+            "extra": "mean: 89.87003241666496 msec\nrounds: 12"
+          },
+          {
+            "name": "tests/bench.py::test_text_extraction",
+            "value": 0.23431000182338027,
+            "unit": "iter/sec",
+            "range": "stddev: 0.013659469826529134",
+            "extra": "mean: 4.2678502506000005 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_read_string_from_stream_performance",
+            "value": 12.191974402218321,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0005883072578400089",
+            "extra": "mean: 82.02116958333268 msec\nrounds: 12"
           }
         ]
       }
