@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1692267681747,
+  "lastUpdate": 1692683772234,
   "repoUrl": "https://github.com/exiledkingcc/PyPDF2",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -11670,6 +11670,65 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.6585922581851043",
             "extra": "mean: 28.448240465799984 sec\nrounds: 5"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "info@martin-thoma.de",
+            "name": "Martin Thoma",
+            "username": "MartinThoma"
+          },
+          "committer": {
+            "email": "info@martin-thoma.de",
+            "name": "Martin Thoma",
+            "username": "MartinThoma"
+          },
+          "distinct": true,
+          "id": "89eb626a7a7e22937b9216e817f5882431196b24",
+          "message": "REL: 3.15.2\n\n## What's new\n\n### Security (SEC)\n-  Avoid endless recursion of reading damaged PDF file (#2093)\n\n### Performance Improvements (PI)\n-  Re-use content stream (#2101)\n\n### Maintenance (MAINT)\n-  Make ParseError inherit from PyPdfError (#2097)\n\n[Full Changelog](https://github.com/py-pdf/pypdf/compare/3.15.1...3.15.2)",
+          "timestamp": "2023-08-20T21:27:52+02:00",
+          "tree_id": "275bb9ff01dfba06be3324d52fc5cbcbdb3d0098",
+          "url": "https://github.com/exiledkingcc/PyPDF2/commit/89eb626a7a7e22937b9216e817f5882431196b24"
+        },
+        "date": 1692683771004,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_page_operations",
+            "value": 0.9408242737961348,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0033566318073297435",
+            "extra": "mean: 1.0628977460000015 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_merge",
+            "value": 9.606108264496415,
+            "unit": "iter/sec",
+            "range": "stddev: 0.012881536720092398",
+            "extra": "mean: 104.10042989999795 msec\nrounds: 10"
+          },
+          {
+            "name": "tests/bench.py::test_text_extraction",
+            "value": 0.18269268006531145,
+            "unit": "iter/sec",
+            "range": "stddev: 0.02910883091270189",
+            "extra": "mean: 5.473673053800002 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_read_string_from_stream_performance",
+            "value": 8.87573564476219,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0003023866044717137",
+            "extra": "mean: 112.66671744444385 msec\nrounds: 9"
+          },
+          {
+            "name": "tests/bench.py::test_image_new_property_performance",
+            "value": 0.030950116131915263,
+            "unit": "iter/sec",
+            "range": "stddev: 0.17878481521854342",
+            "extra": "mean: 32.31005647079999 sec\nrounds: 5"
           }
         ]
       }
