@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1692683772234,
+  "lastUpdate": 1693199374399,
   "repoUrl": "https://github.com/exiledkingcc/PyPDF2",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -11729,6 +11729,65 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.17878481521854342",
             "extra": "mean: 32.31005647079999 sec\nrounds: 5"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "info@martin-thoma.de",
+            "name": "Martin Thoma",
+            "username": "MartinThoma"
+          },
+          "committer": {
+            "email": "info@martin-thoma.de",
+            "name": "Martin Thoma",
+            "username": "MartinThoma"
+          },
+          "distinct": true,
+          "id": "b41f0d5c61653168634f749ab72eded45c8e63e6",
+          "message": "REL: 3.15.4\n\n## What's new\n\n### Performance Improvements (PI)\n-  Making pypdf as fast as pdfrw (#2086)\n\n### Maintenance (MAINT)\n-  Relax typing_extensions version (#2104)\n\n[Full Changelog](https://github.com/py-pdf/pypdf/compare/3.15.3...3.15.4)",
+          "timestamp": "2023-08-27T10:39:08+02:00",
+          "tree_id": "e508c7a529f94861c26f470f4bf18eb1dcdda8e2",
+          "url": "https://github.com/exiledkingcc/PyPDF2/commit/b41f0d5c61653168634f749ab72eded45c8e63e6"
+        },
+        "date": 1693199372966,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_page_operations",
+            "value": 1.9972821447943239,
+            "unit": "iter/sec",
+            "range": "stddev: 0.008666609876545843",
+            "extra": "mean: 500.6803883999964 msec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_merge",
+            "value": 9.106409715219687,
+            "unit": "iter/sec",
+            "range": "stddev: 0.007830545074934657",
+            "extra": "mean: 109.81276170000172 msec\nrounds: 10"
+          },
+          {
+            "name": "tests/bench.py::test_text_extraction",
+            "value": 0.17556249079930306,
+            "unit": "iter/sec",
+            "range": "stddev: 0.05192768459199899",
+            "extra": "mean: 5.695977514600003 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_read_string_from_stream_performance",
+            "value": 9.097827906324378,
+            "unit": "iter/sec",
+            "range": "stddev: 0.005835274435373305",
+            "extra": "mean: 109.91634599999935 msec\nrounds: 9"
+          },
+          {
+            "name": "tests/bench.py::test_image_new_property_performance",
+            "value": 0.03052030586839549,
+            "unit": "iter/sec",
+            "range": "stddev: 0.24867807558196608",
+            "extra": "mean: 32.7650713696 sec\nrounds: 5"
           }
         ]
       }
