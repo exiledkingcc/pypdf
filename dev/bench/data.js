@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1693199374399,
+  "lastUpdate": 1693548397829,
   "repoUrl": "https://github.com/exiledkingcc/PyPDF2",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -11788,6 +11788,65 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.24867807558196608",
             "extra": "mean: 32.7650713696 sec\nrounds: 5"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "4083478+pubpub-zz@users.noreply.github.com",
+            "name": "pubpub-zz",
+            "username": "pubpub-zz"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "301b5423986b71a9e9d82f5e22d97ada2feb2159",
+          "message": "ROB: Cope with damaged PDF (#2129)\n\nDealing with a non-standard compliant PDF where the length is an IndirectObject that can not be found returning None.\r\n\r\nSee https://github.com/py-pdf/pypdf/issues/140#issuecomment-1685380549 following.\r\n\r\nCloses  #140",
+          "timestamp": "2023-08-31T13:31:53+02:00",
+          "tree_id": "64fe4d75992eb1144e7ae78892723dec40147395",
+          "url": "https://github.com/exiledkingcc/PyPDF2/commit/301b5423986b71a9e9d82f5e22d97ada2feb2159"
+        },
+        "date": 1693548396728,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_page_operations",
+            "value": 2.199246422143529,
+            "unit": "iter/sec",
+            "range": "stddev: 0.014634035431249401",
+            "extra": "mean: 454.7012058000007 msec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_merge",
+            "value": 9.497662215504954,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00882208724501872",
+            "extra": "mean: 105.28906769999651 msec\nrounds: 10"
+          },
+          {
+            "name": "tests/bench.py::test_text_extraction",
+            "value": 0.1933656925531914,
+            "unit": "iter/sec",
+            "range": "stddev: 0.1301735236637014",
+            "extra": "mean: 5.1715482038000005 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_read_string_from_stream_performance",
+            "value": 9.717653317823475,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0049110683710515725",
+            "extra": "mean: 102.90550272727538 msec\nrounds: 11"
+          },
+          {
+            "name": "tests/bench.py::test_image_new_property_performance",
+            "value": 0.031954007065065945,
+            "unit": "iter/sec",
+            "range": "stddev: 0.23279555271428756",
+            "extra": "mean: 31.294979623800003 sec\nrounds: 5"
           }
         ]
       }
