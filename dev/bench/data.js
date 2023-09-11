@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1693895501837,
+  "lastUpdate": 1694398236060,
   "repoUrl": "https://github.com/exiledkingcc/PyPDF2",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -11906,6 +11906,65 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.12881750487282062",
             "extra": "mean: 25.499140041199997 sec\nrounds: 5"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "info@martin-thoma.de",
+            "name": "Martin Thoma",
+            "username": "MartinThoma"
+          },
+          "committer": {
+            "email": "info@martin-thoma.de",
+            "name": "Martin Thoma",
+            "username": "MartinThoma"
+          },
+          "distinct": true,
+          "id": "fb3548538a90ce8cb0773a62131801631ba28276",
+          "message": "REL: 3.16.0\n\n## What's new\n\n### Security (SEC)\n-  Infinite recursion caused by IndirectObject clone (#2156)\n\n### New Features (ENH)\n-  Ease access to ViewerPreferences (#2144)\n\n### Bug Fixes (BUG)\n-  catch the case where w[0] is an IndirectObject instead of an int (#2154)\n-  Cope with indirect objects in filters and remove deprecated code (#2177)\n-  Cope with extra space (#2151)\n-  Merge pages without resources (#2150)\n-  getcontents() shall return None if contents is NullObject (#2161)\n-  Fix conversion from 1 to LA (#2175)\n-  Accept tabs in cmaps (#2174)\n\n### Robustness (ROB)\n-  Accept XYZ with no arguments (#2178)\n\n[Full Changelog](https://github.com/py-pdf/pypdf/compare/3.15.5...3.16.0)",
+          "timestamp": "2023-09-10T15:26:45+02:00",
+          "tree_id": "4419f5a010c23c9c2262ffcaba596c9e52350355",
+          "url": "https://github.com/exiledkingcc/PyPDF2/commit/fb3548538a90ce8cb0773a62131801631ba28276"
+        },
+        "date": 1694398234827,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_page_operations",
+            "value": 2.395256042494683,
+            "unit": "iter/sec",
+            "range": "stddev: 0.009686106702484485",
+            "extra": "mean: 417.4919016000018 msec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_merge",
+            "value": 10.63230590986749,
+            "unit": "iter/sec",
+            "range": "stddev: 0.007960029247031129",
+            "extra": "mean: 94.05297481818438 msec\nrounds: 11"
+          },
+          {
+            "name": "tests/bench.py::test_text_extraction",
+            "value": 0.2001340012816034,
+            "unit": "iter/sec",
+            "range": "stddev: 0.06182483180785569",
+            "extra": "mean: 4.996652210999997 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_read_string_from_stream_performance",
+            "value": 9.710888265383142,
+            "unit": "iter/sec",
+            "range": "stddev: 0.003914229977481812",
+            "extra": "mean: 102.97719144444766 msec\nrounds: 9"
+          },
+          {
+            "name": "tests/bench.py::test_image_new_property_performance",
+            "value": 0.032748472669767666,
+            "unit": "iter/sec",
+            "range": "stddev: 0.3207605324609015",
+            "extra": "mean: 30.535775212599997 sec\nrounds: 5"
           }
         ]
       }
