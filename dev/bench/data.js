@@ -1,6 +1,6 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1694656859846,
-  "repoUrl": "https://github.com/exiledkingcc/PyPDF2",
+  "lastUpdate": 1697424419069,
+  "repoUrl": "https://github.com/exiledkingcc/pypdf",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
       {
@@ -12083,6 +12083,65 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.36075138773224374",
             "extra": "mean: 32.059066565 sec\nrounds: 5"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "4083478+pubpub-zz@users.noreply.github.com",
+            "name": "pubpub-zz",
+            "username": "pubpub-zz"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "448c379331f855684c5808e1c67fe374ba8088cf",
+          "message": "BUG: Handle empty root outline (#2239)\n\nCloses #2233",
+          "timestamp": "2023-10-14T08:47:24+02:00",
+          "tree_id": "90fd24e5efe7609647e4dcb4678400d71d07daa8",
+          "url": "https://github.com/exiledkingcc/pypdf/commit/448c379331f855684c5808e1c67fe374ba8088cf"
+        },
+        "date": 1697424417746,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_page_operations",
+            "value": 2.150123663007811,
+            "unit": "iter/sec",
+            "range": "stddev: 0.012407156301301951",
+            "extra": "mean: 465.08952820001923 msec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_merge",
+            "value": 9.890927187205234,
+            "unit": "iter/sec",
+            "range": "stddev: 0.008822256564990328",
+            "extra": "mean: 101.1027562000038 msec\nrounds: 10"
+          },
+          {
+            "name": "tests/bench.py::test_text_extraction",
+            "value": 0.1810789176221158,
+            "unit": "iter/sec",
+            "range": "stddev: 0.01795870315672387",
+            "extra": "mean: 5.5224540389999905 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_read_string_from_stream_performance",
+            "value": 8.821443391208634,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00021159652357028574",
+            "extra": "mean: 113.36013344444179 msec\nrounds: 9"
+          },
+          {
+            "name": "tests/bench.py::test_image_new_property_performance",
+            "value": 0.030891325324263683,
+            "unit": "iter/sec",
+            "range": "stddev: 0.22129653094979973",
+            "extra": "mean: 32.37154733580003 sec\nrounds: 5"
           }
         ]
       }
